@@ -1,7 +1,5 @@
 # keyloggerInC
 
-# Keylogger in C
-
 ## Overview
 
 Welcome to the Keylogger in C project! This simple keylogger application logs keystrokes along with timestamps and encrypts the logged data for security. You can also decrypt the data to view the original keystrokes. The project is structured into several modules for better organization and maintainability.
@@ -38,7 +36,10 @@ Welcome to the Keylogger in C project! This simple keylogger application logs ke
 ### Running the Keylogger
 
 To start logging keystrokes:
+
+    ```sh
     ./keylogger log K encrypted.txt
+    ```
 
 - `log`: Indicates logging mode.
 - `K`: Encryption key (a single character).
@@ -47,7 +48,10 @@ To start logging keystrokes:
 ### Decrypting the Logs
 
 To decrypt the logged data:
+
+    ```sh
     ./keylogger decrypt K encrypted.txt decrypted.txt
+    ```
 
 - `decrypt`: Indicates decryption mode.
 - `K`: Encryption key (must be the same key used for logging).
@@ -56,6 +60,7 @@ To decrypt the logged data:
 
 ## Directory Structure
 
+<pre>
 project/
 ├── include/
 │   ├── keylogger.h
@@ -69,6 +74,7 @@ project/
 │   ├── encryption.c
 │   └── timestamp.c
 └── README.md
+</pre>
 
 ## How It Works
 
