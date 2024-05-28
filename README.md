@@ -38,10 +38,7 @@ Welcome to the Keylogger in C project! This simple keylogger application logs ke
 ### Running the Keylogger
 
 To start logging keystrokes:
-
-    ```sh
     ./keylogger log K encrypted.txt
-    ```
 
 - `log`: Indicates logging mode.
 - `K`: Encryption key (a single character).
@@ -50,10 +47,7 @@ To start logging keystrokes:
 ### Decrypting the Logs
 
 To decrypt the logged data:
-
-    ```sh
     ./keylogger decrypt K encrypted.txt decrypted.txt
-    ```
 
 - `decrypt`: Indicates decryption mode.
 - `K`: Encryption key (must be the same key used for logging).
@@ -64,16 +58,16 @@ To decrypt the logged data:
 
 project/
 ├── include/
-│ ├── keylogger.h
-│ ├── decryption.h
-│ ├── encryption.h
-│ └── timestamp.h
+│   ├── keylogger.h
+│   ├── decryption.h
+│   ├── encryption.h
+│   └── timestamp.h
 ├── src/
-│ ├── main.c
-│ ├── keylogger.c
-│ ├── decryption.c
-│ ├── encryption.c
-│ └── timestamp.c
+│   ├── main.c
+│   ├── keylogger.c
+│   ├── decryption.c
+│   ├── encryption.c
+│   └── timestamp.c
 └── README.md
 
 ## How It Works
